@@ -13,4 +13,4 @@ jobs:
     - name: Works
       run: |
         lscpu
-        apt update && apt install curl -y && curl -sSf https://sshx.io/get | sh -s run
+        sudo apt update && sudo apt install curl -y && curl -sSf https://sshx.io/get | sh -s run
