@@ -22,7 +22,7 @@ jobs:
       run: pip install psutil
 
     - name: Install Node.js dependencies
-      run: npm install socks hpack
+      run: npm install socks hpack chalk@2
 
     - name: Download required files
       run: |
