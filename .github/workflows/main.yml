@@ -4,7 +4,7 @@ on: push
 
 jobs:
   check_cpu:
-    runs-on: namespace-profile-name-spave-jsbeinw
+    runs-on: depot-ubuntu-24.04-32
 
     steps:
     - name: Checkout code
