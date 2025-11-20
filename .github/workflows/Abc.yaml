@@ -1,0 +1,7 @@
+name: depot-test
+on: push
+jobs:
+  test:
+    runs-on: depot-ubuntu-24.04
+    steps:
+      - run: echo "hello from depot runner"
